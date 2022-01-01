@@ -15,4 +15,6 @@ basic.forever(function () {
     } else {
         basic.showString("N")
     }
+    basic.pause(5000)
+    basic.clearScreen()
 })
