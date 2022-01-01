@@ -1,4 +1,7 @@
 let gradi = 0
+input.onButtonPressed(Button.A, function () {
+    basic.showString("" + (gradi))
+})
 basic.forever(function () {
     gradi = input.compassHeading()
     if (gradi < 45) {
