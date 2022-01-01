@@ -1,8 +1,5 @@
 let gradi = 0
 input.onButtonPressed(Button.A, function () {
-    basic.showString("" + (gradi))
-})
-basic.forever(function () {
     gradi = input.compassHeading()
     if (gradi < 45) {
         basic.showString("N")
@@ -17,4 +14,7 @@ basic.forever(function () {
     }
     basic.pause(5000)
     basic.clearScreen()
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("" + (gradi))
 })
