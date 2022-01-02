@@ -1,13 +1,13 @@
-let gradi = 0
+let varGradi = 0
 input.onButtonPressed(Button.A, function () {
-    gradi = input.compassHeading()
-    if (gradi < 45) {
+    varGradi = input.compassHeading()
+    if (varGradi < 45) {
         basic.showString("N")
-    } else if (gradi < 135) {
+    } else if (varGradi < 135) {
         basic.showString("E")
-    } else if (gradi < 225) {
+    } else if (varGradi < 225) {
         basic.showString("S")
-    } else if (gradi < 315) {
+    } else if (varGradi < 315) {
         basic.showString("O")
     } else {
         basic.showString("N")
@@ -16,5 +16,7 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showString("" + (gradi))
+    if (input.buttonIsPressed(Button.B)) {
+        basic.showString("" + (varGradi))
+    }
 })
