@@ -1,6 +1,5 @@
 let varGradi = 0
 input.onButtonPressed(Button.A, function () {
-    varGradi = input.compassHeading()
     if (varGradi < 45) {
         basic.showString("N")
     } else if (varGradi < 135) {
@@ -16,7 +15,10 @@ input.onButtonPressed(Button.A, function () {
     basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
-    if (input.buttonIsPressed(Button.B)) {
-        basic.showString("" + (varGradi))
-    }
+    basic.showString("" + (varGradi))
+    basic.pause(1000)
+    basic.clearScreen()
+})
+basic.forever(function () {
+    varGradi = input.compassHeading()
 })
